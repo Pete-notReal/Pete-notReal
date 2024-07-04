@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkzg5KFHLJ4vKpyVSw4kLMnPflshl9tXh5hljFjD8Kdjvs5X2sTp7V9Uj1Yt7nbEdt1vllZ9tq6MQhlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="/favicon-16x16.png">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/imagenes/logo.png" alt="Logo">
+                </a>
+            </div class="nav">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Juegos <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/categorias/todos.html">Todos</a>
+                        <a href="/categorias/accion_y_aventura.html">Acción y Aventura</a>
+                        <a href="/categorias/estrategia.html">Estrategia</a>
+                        <a href="/categorias/deportes_y_carreras.html">Deportes y Carreras</a>
+                        <a href="/categorias/rol_y_fantasia.html">Rol y Fantasía</a>
+                        <a href="/categorias/simulacion.html">Simulación</a>
+                        <a href="/categorias/puzzles_y_educacion.html">Puzzles y Educación</a>
+                    </div>
+                </li>
+                <li><a href="/gamesnews.html">Noticias</a></li>
+                <li><a href="/tiendas.html">Tiendas</a></li>
+                <li><a href="/radiosound.html">Radio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel">
+            <div class="carousel-item active">
+                <a href="/juegos/juego1.html"><img src="imagenes/banner1.png" alt="Minecraft"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="/juegos/juego11.html"><img src="imagenes/banner11.jpg" alt="Otro juego"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="/juegos/juego14.html"><img src="imagenes/banner14.jpg" alt="Otro juego"></a>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </section>
+        <section class="popular-games">
+            <h2>Juegos Populares</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <a href="/juegos/juego7.html"><img src="imagenes/logo7.jpg" alt="spidey"></a>
+                </div>
+                <div class="game-item">
+                    <a href="/juegos/juego62.html"><img src="imagenes/logo62.jpg" alt="fallout"></a>
+                </div>
+                <div class="game-item">
+                    <a href="/juegos/juego3.html"><img src="imagenes/red-dead-logo.jpg" alt="red_dead"></a>
+                </div>
+                <div class="game-item">
+                    <a href="/juegos/juego1.html"><img src="imagenes/logo1mine.jpg" alt="stellaris"></a>
+                </div>
+            </div>
+        </section>
+        <section class="categories">
+            <h2>Categorías</h2>
+            <div class="category-list">
+                <a href="/categorias/accion_y_aventura.html" class="category-button">Acción y Aventura</a>
+                <a href="/categorias/estrategia.html" class="category-button">Estrategia</a>
+                <a href="/categorias/deportes_y_carreras.html" class="category-button">Deportes y Carreras</a>
+                <a href="/categorias/rol_y_fantasia.html" class="category-button">Rol y Fantasía</a>
+                <a href="/categorias/simulacion.html" class="category-button">Simulación</a>
+                <a href="/categorias/puzzles_y_educacion.html" class="category-button">Puzzles y Educación</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Donovan y Tristan</p>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+        
+        document.querySelector('.next').addEventListener('click', () => {
+            changeSlide(1);
+        });
+        
+        document.querySelector('.prev').addEventListener('click', () => {
+            changeSlide(-1);
+        });
+        
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planet Zoo</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkzg5KFHLJ4vKpyVSw4kLMnPflshl9tXh5hljFjD8Kdjvs5X2sTp7V9Uj1Yt7nbEdt1vllZ9tq6MQhlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="/favicon-16x16.png">
+    </head>
+<body>
+   <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/imagenes/logo.png" alt="Logo">
+                </a>
+            </div class="nav">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Juegos <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/categorias/todos.html">Todos</a>
+                        <a href="/categorias/accion_y_aventura.html">Acción y Aventura</a>
+                        <a href="/categorias/estrategia.html">Estrategia</a>
+                        <a href="/categorias/deportes_y_carreras.html">Deportes y Carreras</a>
+                        <a href="/categorias/rol_y_fantasia.html">Rol y Fantasía</a>
+                        <a href="/categorias/simulacion.html">Simulación</a>
+                        <a href="/categorias/puzzles_y_educacion.html">Puzzles y Educación</a>
+                    </div>
+                </li>
+                <li><a href="/gamesnews.html">Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <div class="game-banner">
+            <img src="\imagenes\banner46.jpg" alt="Minecraft Banner">
+        </div>
+        <div class="detalles-juego">
+            <div class="info">
+                <img src="\imagenes\logo46.jpg" alt="Minecraft">
+                <div class="description">
+                    <h2>Planet Zoo</h2>
+                    <p>Crea y gestiona tu propio zoológico, cuidando de animales y visitantes en este juego de simulación.</p>
+                </div>
+                <div class="meta">
+                    <span>Metacritic Score: 82</span>
+                    <span>Tiempo de juego: Ilimitado</span>
+                    <span>Categoría: Simulación</span>
+                </div>
+            </div>
+            <div class="audi">
+                <audio src="/soundtracks/01 - Subwoofer Lullaby.mp3" controls autoplay></audio>
+            </div>
+            <div class="platforms">
+                <div>
+                    <img src="\imagenes\Pc-logo.png" alt="PC">
+                    <span>PC</span>
+                </div>
+            </div>
+            <div class="screenshots">
+                <img src="\imagenes\screen46.jpg" alt="Screenshot 1">
+                <img src="\imagenes\screen46.1.jpg" alt="Screenshot 2">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Disfruta la vida como si fuera un juego.</p>
+    </footer>
+     <! -- volumen en javascript -->
+    <script>
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('aud');
+            audio.volume = 0.3;
+        });
+    </script>
+</body>
+</html>

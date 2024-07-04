@@ -1,0 +1,539 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+header {
+    background-color: #34495E;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    text-align: left;
+    /*justify-content: space-between;
+    align-items: center;*/
+    padding: 0 20px;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex: 1;
+}
+
+.navbar ul {
+    /*list-style: none;
+    margin: 0;
+    padding: 0;*/
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*
+.carousel {
+    /*display: flex;
+    overflow: hidden;
+    width: 80%;
+    height: 200px;
+    margin: 20px 30px;
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 80vh;
+    /*overflow-x: scroll;*/
+    /*croll-snap-type: x mandatory;
+}
+.carousel-item {
+    min-width: 70%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    flex: 0 0 60%;
+    width: 90%;
+    object-fit: cover;
+    /*scroll-snap-align: center;
+
+}*/
+
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 60%;
+    height: auto;
+    padding: 30px 20%;
+}
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popular-games, .categories {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.popular-games .game-list, .categories .category-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-item, .category-button {
+    margin: 10px;
+}
+
+.game-item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.category-button:hover {
+    background-color: #b71c1c;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*Juegos*/
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.game-banner img {
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 1%;
+}
+.detalles-juego {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+.detalles-juego img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.detalles-juego .info {
+    display: flex;
+    align-items: center;
+}
+.detalles-juego .info .description {
+    flex: 1;
+}
+.detalles-juego .info .meta {
+    text-align: right;
+}
+.detalles-juego .info .meta span {
+    display: block;
+}
+.detalles-juego .platforms {
+    display: flex;
+    margin-top: 20px;
+}
+.detalles-juego .platforms div {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.detalles-juego .platforms div img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    
+}
+/* Asegurar que esté por encima de otros elementos
+.screenshots {
+    display: grid;
+    grid-template-rows: repeat(5, 18vh);
+    grid-template-columns: repeat(2, 45vw);
+    transition: all 0.5s ease;
+    background-color: #82a6cb;
+    border-radius: 10px;
+    padding: 0.25em;
+    cursor: zoom-in;
+
+    @media (min-width: 40em) {
+        grid-template-rows: repeat(2, 20vh);
+    }
+
+    @media (min-width: 10em) and (orientation: landscape) {
+        grid-template-columns: repeat(5, 18vw);
+        grid-template-rows: repeat(2, 45vh);
+    }
+
+    @media (min-width: 60em) {
+        grid-template-columns: repeat(10, 8vw);
+        grid-template-rows: 25vh;
+    }
+}
+
+.screenshots img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.s ease;
+    position: relative;
+    box-shadow: 0 0 0 #0000;
+    opacity: 0.67;
+    filter: sepia(80%) hue-rotate(180deg);
+
+    &:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    &:last-child {
+        border-radius: 0 0 10px 10px;
+    }
+
+    @media (min-width: 40em) and (max-width: 59.99em) {
+        &:first-child {
+            border-radius: 10px 0 0 0;
+        }
+        &:nth-child(5) {
+            border-radius: 0 10px 0 0;
+        }
+        &:nth-child(6) {
+            border-radius: 0 0 10px 0;
+        }
+        &:last-child {
+            border-radius: 0 0 0 10px;
+        }
+    }
+
+    @media (min-width: 60em) {
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+        z-index: 1;
+        box-shadow: 1em 1em 1em #0004;
+        transition: all 0.3s ease;
+        filter: sepia(0%) hue-rotate(0deg);
+        border-radius: 5px;
+        transform: scale(1.2); 
+        position: fixed; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2); 
+
+        @media (min-width: 40em) {
+            transform: translate(-50%, -50%) scale(1.2); 
+        }
+
+        @media (min-width: 10em) and (orientation: landscape) {
+            transform: translate(-50%, -50%) scale(1.1); 
+        }
+
+        @media (min-width: 40em) and (orientation: portrait) {
+            transform: translate(-50%, -50%) scale(1.1); 
+        }
+
+        @media (min-width: 60em) {
+            transform: translate(-50%, -50%) scale(1.1); 
+
+            ~ img {
+                transform: translate(-50%, -50%) scale(1.1); 
+            }
+        }
+
+        @media (min-width: 60em) and (orientation: landscape) {
+            transform: translate(-50%, -50%) scale(1.2); 
+
+            ~ img {
+                transform: translate(-50%, -50%) scale(1.1); 
+            }
+        }
+    }
+}
+
+/* Ajustes en .detalles-juego .screenshots 
+.detalles-juego .screenshots {
+    display: flex;
+    margin-top: 20px;
+}
+
+.detalles-juego .screenshots img {
+    width: 30%;
+    height: auto; 
+    margin-right: 10px;
+    transition: transform 0.1s ease; 
+}
+
+.detalles-juego .screenshots img:hover {
+    transform: scale(1.2); 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); 
+    z-index: 10;  
+}*/
+
+.detalles-juego .screenshots {
+    display: flex;
+    margin-top: 20px;
+    
+}
+.detalles-juego .screenshots img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+
+}
+/*Prueba*/
+
+.platforms {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.meta span{
+    background-color: #00CE7A;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.meta a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.audi {
+    width: 25%;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #444;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+/* radio*/
+
+.radio {
+    background-color: #2d2d2d;
+    color: #ffc266;
+    font-family: 'Roboto', sans-serif;
+  }
+  #myProgress {
+    width: 420px;
+     background-color: #d9d9f2; 
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  #myBar {
+    width: 0%;
+    height: 5px;
+    background-color: #ffc266;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    fill: red;
+  }
+  
+  .btn-action{
+    cursor: pointer;
+    padding-top: 10px;
+    width: 30px;
+  }
+  
+  .btn-ctn, .infos-ctn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .infos-ctn{
+  padding-top: 20px;
+  }
+  
+  .btn-ctn > div {
+   padding: 5px;
+   margin-top: 18px;
+   margin-bottom: 18px;
+  }
+  
+  .infos-ctn > div {
+   margin-bottom: 8px;
+   color: #ffc266;
+  }
+  
+  .first-btn{
+    margin-left: 3px;
+  }
+  
+  .duration{
+    margin-left: 10px;
+  }
+  
+  .title{
+    margin-left: 10px;
+    width: 210px;
+    text-align: center;
+  }
+  
+  .player-ctn{
+    border-radius: 15px;
+    width: 420px;
+    padding: 10px;
+    background-color: #373737;
+    margin:auto;
+    margin-top: 100px;
+  }
+  
+  .playlist-track-ctn{
+    display: flex;
+    background-color: #464646;
+    margin-top: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .playlist-track-ctn:last-child{
+    /*border: 1px solid #ffc266; */
+  }
+  
+  .playlist-track-ctn > div{
+    margin:10px;
+  }
+  .playlist-info-track{
+    width: 80%;
+  }
+  .playlist-info-track,.playlist-duration{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #e9cc95;
+    font-size: 14px;
+    pointer-events: none;
+  }
+  .playlist-ctn{
+     padding-bottom: 20px;
+  }
+  .active-track{
+    background: #4d4d4d;
+    color: #ffc266 !important;
+    font-weight: bold;
+    
+  }
+  
+  .active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+    color: #ffc266 !important;
+  }
+  
+  
+  .playlist-btn-play{
+    pointer-events: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .fas{
+    color: #ffc266;
+    font-size: 20px;
+  }
