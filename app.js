@@ -30,18 +30,24 @@ function createTrackItem(index,name,duration){
 
   var listAudio = [
     {
-      name:"Artist 1 - audio 1",
-      file:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
-      duration:"08:47"
+      name:"Fallout",
+      file:"/soundtracks/62 - Fallout 3 Soundtrack - I dont want to set the World on Fire.mp3",
+      duration:"03:07"
     },
     {
-      name:"Artist 2 - audio 2",
-      file:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
-      duration:"05:53"
+      name:"Minecraft",
+      file:"/soundtracks/01 - Subwoofer Lullaby.mp3",
+      duration:"03:27"
     },
     {
-      name:"Artist 3 - audio 3",
-      file:"https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_1MG.mp3",
+      name:"The Legend of Zelda- Breath of the Wild",
+      file:"/soundtracks/02 - The Legend of Zelda- Breath of the Wild - Theme (SoundTrack).mp3",
+      duration:"00:27"
+    }
+    ,
+    {
+      name:"00 RickRoll",
+      file:"/soundtracks/00-Rick Astley - Never Gonna Give You Up.mp3",
       duration:"00:27"
     }
   ]
